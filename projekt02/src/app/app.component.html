@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+
+<p><input type="number" [(ngModel)]="a" placeholder="a="></p>
+<p><input type="number" [(ngModel)]="b" placeholder="b="></p>
+
+<p><button (click)="dodawanie()">+</button> <button (click)="odejmowanie()">-</button></p>
+<p><button (click)="mnozenie()">*</button> <button (click)="dzielenie()">/</button></p>
+
+<p>
+ Wynik: <input type="number" [(ngModel)]="wynik" />
+</p>

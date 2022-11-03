@@ -1,0 +1,23 @@
+<h3>{{title}}</h3>
+
+<p [style.background-color]="kolor" [style.text-align]="srodek">Imię i nazwisko: {{imie}} {{nazwisko}}, lat: {{dana}}</p>
+
+<img src="assets/odraz1.jpg" alt="osoba 1"/>
+
+<img src='{{ foto2 }}' alt="osoba 2"/>
+
+<img [src]="foto3" alt="osoba 3"/>
+
+<br/>
+
+<input type="button" value="Zmień kolor tła" (click)="zmien_kolor()">
+<button (click)="zmien_kolor()">Zmień kolor tła</button>
+
+<br/>
+
+Wiązanie jednokierunkowe: <input type="text" [value]="nazwisko" /> <br />
+Wiązanie dwukierunkowe: <input type="text" [(ngModel)]="nazwisko" /> <br />
+
+Dana: <input type="number" [(ngModel)]="dana" />
+
+
