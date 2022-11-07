@@ -5,6 +5,7 @@
 - projekt00 - testowy
 - projekt01 - wiązanie danych
 - projekt02 - prosty kalkulator
+- projekt03 - Kalkulator
 
 ## Komendy włączania
 
