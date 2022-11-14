@@ -6,6 +6,7 @@
 - projekt01 - wiązanie danych
 - projekt02 - prosty kalkulator
 - projekt03 - Kalkulator
+- projekt04 - Kalkulator lepszy
 
 ## Komendy włączania
 

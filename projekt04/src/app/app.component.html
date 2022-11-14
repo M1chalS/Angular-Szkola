@@ -1,0 +1,5 @@
+<main>
+<input type="text" class="wys" [(ngModel)]="wyswietlacz" />
+
+<input type="button"  *ngFor="let v of element" [value]="v" (click)="wstaw(v)" class="button-cos" />
+</main>
