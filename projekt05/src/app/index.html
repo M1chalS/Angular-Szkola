@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+</head>
+<body>
+<p><input type="text" value="{{osoba.nazwisko}}" [(ngModel)]=osoba.nazwisko></p>
+<p>Imie: {{osoba.imie}} </p>
+<p>Nazwisko: {{osoba.nazwisko}}</p>
+
+<p>
+
+  <img src="{{osoba.zdjecie}}" alt="Osoba" *ngIf="pokaz_zdjecie else brak_zdjecia" width="300"/>
+
+  <ng-template #brak_zdjecia>
+    <img src="{{osoba.bez_zdjecia}}" alt="Osoba" width="300"/>
+  </ng-template>
+
+</p>
+Pokaz zdjecie: <input type="checkbox" [(ngModel)]="pokaz_zdjecie"><br>
+
+
+<span *ngIf="pokaz_samochod else zmien_samochod">
+<img src="{{samochod}}" alt="Samochód 1" height="200" /> <br>
+<p >Robert w bentleyu</p>
+</span>
+<ng-template #zmien_samochod>
+  <img src="{{drugi_samochod}}" alt="Samochód 2" height="200" /> <br>
+  <p>Robert z Audi</p>
+</ng-template>
+
+Pokaz zdjecie: <button (click)="pokaz_samochod=!pokaz_samochod"> Pokaz Samochód </button>
+
+
+<p [ngSwitch]="osoba.type">
+  Płeć:
+  <span *ngSwitchCase="0">Kobieta</span>
+  <span *ngSwitchCase="1">Mężczyzna</span>
+  <span *ngSwitchCase="2">Nie podano</span>
+</p>
+
+<p [innerHTML]="osoby"></p>
+
+</body>
+</html>
