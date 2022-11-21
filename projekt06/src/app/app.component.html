@@ -1,0 +1,17 @@
+<h2>Liczba kursów: {{kursy.length}}</h2>
+<ol>
+  <li *ngFor="let x of kursy;">{{x}}</li>
+</ol>
+<form >
+  <label for="name">
+    Imie i nazwisko:
+  </label><br>
+  <input type="text" id="name" name="name" [(ngModel)]="name"><br>
+  <label for="numer_kursu">
+    Numer kursu:
+  </label><br>
+  <input type="number" id="numer_kursu" name="numer_kursu" [(ngModel)]="numer_kursu"><br>
+
+  <button type="submit" (click)="Wstaw()">Zapisz się do kursu</button>
+
+</form>
