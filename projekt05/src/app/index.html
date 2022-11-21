@@ -40,7 +40,16 @@ Pokaz zdjecie: <button (click)="pokaz_samochod=!pokaz_samochod"> Pokaz Samochód
   <span *ngSwitchCase="2">Nie podano</span>
 </p>
 
-<p [innerHTML]="osoby"></p>
+<table>
+  <tr *ngFor="let x of osoba.adres; let i=index; let p=even; let np=odd; let f = first; let l = last;">
+    <td>{{i}}</td>
+    <td>{{x}}</td>
+    <td>{{p}}</td>
+    <td>{{np}}</td>
+    <td>{{f}}</td>
+    <td>{{l}}</td>
+  </tr>
+</table>
 
 </body>
 </html>

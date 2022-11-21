@@ -7,6 +7,7 @@
 - projekt02 - prosty kalkulator
 - projekt03 - Kalkulator
 - projekt04 - Kalkulator lepszy
+- projekt05 - If else switch
 
 ## Komendy włączania
 
