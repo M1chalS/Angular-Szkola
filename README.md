@@ -8,7 +8,8 @@
 - projekt03 - Kalkulator
 - projekt04 - Kalkulator lepszy
 - projekt05 - If else switch
-- projekt06 - egzamin
+- projekt06 - Egzamin
+- projekt07 - Powtórzenie
 
 ## Komendy włączania
 
