@@ -7,6 +7,7 @@ export interface Samochod {
 }
 
 export enum Rodzaj {
+  brak,
   sportowy,
   terenowy,
   kamper,

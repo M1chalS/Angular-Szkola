@@ -1,8 +1,7 @@
 <header>
   Wybierz samochód marzeń:
-  <select class="select-samochody">
-    <option [ngValue]="null">Brak wyboru</option>
-    <option *ngFor="let x of samochody">{{x.marka}} {{x.model}}</option>
+  <select class="select-samochody" [(ngModel)]="samochod">
+    <option *ngFor="let x of samochody" [ngValue]="x">{{x.marka}} {{x.model}}</option>
   </select>
 </header>
 <main>
@@ -10,16 +9,25 @@
     <input type="checkbox" [(ngModel)]="pokaz_zdjecie"> Pokaż zdjęcie
   </aside>
   <article>
-    <p>{{samochod.marka}} {{samochod.model}}</p>
+    <h3>{{samochod.marka}} {{samochod.model}}</h3>
+
+    <p *ngFor="let value of samochod.dane">{{value}}</p>
 
     <ng-template #brak_zdjecia>
-      <p>Brak zdjęcia</p>
+      <b>Brak zdjęcia</b>
     </ng-template>
 
-    <img class="zdjecie-samochodu" *ngIf="pokaz_zdjecie" src="{{samochod.zdjecie}}" alt="{{samochod.marka}}">
+    <img class="zdjecie-samochodu" *ngIf="pokaz_zdjecie else brak_zdjecia" src="{{samochod.zdjecie}}" alt="{{samochod.marka}}">
 
   </article>
   <section>
+
+    <ng-container [ngSwitch]="samochod.typ" >
+      <img src="assets/default.png" alt="domyślny" *ngSwitchDefault class="rodzaj-icon" />
+      <img src="assets/sportowy.jpg" alt="sportowy" *ngSwitchCase="R.sportowy" class="rodzaj-icon" />
+      <img src="assets/terenowy.jpg" alt="terenowy" *ngSwitchCase="R.terenowy" class="rodzaj-icon" />
+      <img src="assets/kamper.jpg" alt="kamper" *ngSwitchCase="R.kamper" class="rodzaj-icon" />
+    </ng-container>
 
   </section>
 </main>

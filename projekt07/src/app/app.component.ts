@@ -11,6 +11,13 @@ export class AppComponent {
   title = 'projekt07';
   samochody:Samochod[] = [
     {
+      marka: "brak",
+      model: "wyboru",
+      zdjecie: "https://ocs-pl.oktawave.com/v1/AUTH_2887234e-384a-4873-8bc5-405211db13a2/autoblog/2022/06/brak-samochodu-3.jpg",
+      dane: ["brak danych"],
+      typ: Rodzaj.brak
+    },
+    {
       marka: "Audi",
       model: "RS7",
       zdjecie: "https://fazicars.pl/wp-content/uploads/2022/04/AUDI-RS7-2.jpeg",
@@ -37,5 +44,6 @@ export class AppComponent {
 
   pokaz_zdjecie:boolean = false;
 
+  R=Rodzaj;
 
 }
