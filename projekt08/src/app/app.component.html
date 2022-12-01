@@ -1,0 +1,6 @@
+<form #zmienna="ngForm" (ngSubmit)="wstaw(zmienna)">
+  <h1>Bardzo ważny formularz</h1>
+  <input type="text" name="name" id="name" placeholder="imie" [(ngModel)]="imie">
+  <input type="text" name="last_name" id="last_name" placeholder="nazwisko" [(ngModel)]="nazwisko">
+  <button type="submit">Zatwierdź</button>
+</form>

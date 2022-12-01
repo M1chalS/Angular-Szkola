@@ -10,23 +10,24 @@
   </aside>
   <article>
     <h3>{{samochod.marka}} {{samochod.model}}</h3>
-
-    <p *ngFor="let value of samochod.dane">{{value}}</p>
-
+    <ul class="margin-top">
+      <li *ngFor="let value of samochod.dane">{{value}}</li>
+    </ul>
     <ng-template #brak_zdjecia>
-      <b>Brak zdjęcia</b>
+      <b class="margin-top">Brak zdjęcia</b>
     </ng-template>
 
-    <img class="zdjecie-samochodu" *ngIf="pokaz_zdjecie else brak_zdjecia" src="{{samochod.zdjecie}}" alt="{{samochod.marka}}">
+    <img class="zdjecie-samochodu margin-top" *ngIf="pokaz_zdjecie else brak_zdjecia" src="{{samochod.zdjecie}}"
+         alt="{{samochod.marka}}">
 
   </article>
   <section>
 
-    <ng-container [ngSwitch]="samochod.typ" >
-      <img src="assets/default.png" alt="domyślny" *ngSwitchDefault class="rodzaj-icon" />
-      <img src="assets/sportowy.jpg" alt="sportowy" *ngSwitchCase="R.sportowy" class="rodzaj-icon" />
-      <img src="assets/terenowy.jpg" alt="terenowy" *ngSwitchCase="R.terenowy" class="rodzaj-icon" />
-      <img src="assets/kamper.jpg" alt="kamper" *ngSwitchCase="R.kamper" class="rodzaj-icon" />
+    <ng-container [ngSwitch]="samochod.typ">
+      <img src="assets/default.png" alt="domyślny" *ngSwitchDefault class="rodzaj-icon"/>
+      <img src="assets/sportowy.jpg" alt="sportowy" *ngSwitchCase="R.sportowy" class="rodzaj-icon"/>
+      <img src="assets/terenowy.jpg" alt="terenowy" *ngSwitchCase="R.terenowy" class="rodzaj-icon"/>
+      <img src="assets/kamper.jpg" alt="kamper" *ngSwitchCase="R.kamper" class="rodzaj-icon"/>
     </ng-container>
 
   </section>

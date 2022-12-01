@@ -10,6 +10,7 @@
 - projekt05 - If else switch
 - projekt06 - Egzamin
 - projekt07 - Powtórzenie
+- projekt08 - Formularz
 
 ## Komendy włączania
 
