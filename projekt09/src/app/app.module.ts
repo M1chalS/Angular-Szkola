@@ -7,16 +7,21 @@ import { CorkaComponent } from './corka/corka.component';
 import { WnukComponent } from './corka/wnuk/wnuk.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SynComponent,
-    CorkaComponent,
-    WnukComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        SynComponent,
+        CorkaComponent,
+        WnukComponent
+    ],
+    imports: [
+        BrowserModule
+    ],
+    providers: [],
+    exports: [
+        CorkaComponent,
+        SynComponent,
+        WnukComponent
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

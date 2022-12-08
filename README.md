@@ -13,6 +13,7 @@
 - projekt08 - Formularz
 - projekt09 - Rodzina
 - projekt10 - Powtórzenie, ale komponentami
+- projekt11 - Komponent nr 2
 
 ## Komendy włączania
 

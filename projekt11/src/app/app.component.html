@@ -1,0 +1,8 @@
+<app-syn [zmiennaImport]="zmiennaExport" [listaImport]="wybor"></app-syn>
+
+<select [(ngModel)]="wybor">
+  <option *ngFor="let x of lista">{{x}}</option>
+</select>
+<br>
+<input type="text" [(ngModel)]="decyzja">
+<app-corka *ngIf="decyzja.length > 0"></app-corka>
