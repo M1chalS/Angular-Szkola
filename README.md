@@ -2,8 +2,8 @@
 
 ## Spis projektów:
 
-- projekt00 - testowy
-- projekt01 - wiązanie danych
+- projekt00 - Testowy
+- projekt01 - Wiązanie danych
 - projekt02 - prosty kalkulator
 - projekt03 - Kalkulator
 - projekt04 - Kalkulator lepszy
@@ -11,6 +11,8 @@
 - projekt06 - Egzamin
 - projekt07 - Powtórzenie
 - projekt08 - Formularz
+- projekt09 - Rodzina
+- projekt10 - Powtórzenie, ale komponentami
 
 ## Komendy włączania
 

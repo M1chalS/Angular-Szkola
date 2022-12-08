@@ -1,0 +1,13 @@
+<h3>{{marka}} {{model}}</h3>
+<ul class="margin-top">
+  <li *ngFor="let value of dane">{{value}}</li>
+</ul>
+
+<img class="zdjecie-samochodu margin-top" *ngIf="pokaz_zdjecie else brak_zdjecia" src="{{zdjecie}}"
+     alt="{{marka}}">
+
+<ng-template #brak_zdjecia>
+  <b class="margin-top">Brak zdjęcia</b>
+</ng-template>
+
+

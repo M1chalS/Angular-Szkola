@@ -1,0 +1,26 @@
+<header>
+  Wybierz samochód marzeń:
+  <select class="select-samochody" [(ngModel)]="samochod">
+    <option *ngFor="let x of samochody" [ngValue]="x">{{x.marka}} {{x.model}}</option>
+  </select>
+</header>
+<main>
+  <aside>
+    <input type="checkbox" [(ngModel)]="pokaz_zdjecie"> Pokaż zdjęcie
+  </aside>
+  <article>
+
+    <app-main [marka]="samochod.marka" [model]="samochod.model" [zdjecie]="samochod.zdjecie" [dane]="samochod.dane" [pokaz_zdjecie]="pokaz_zdjecie"></app-main>
+
+  </article>
+  <section>
+
+    <ng-container [ngSwitch]="samochod.typ">
+      <img src="assets/default.png" alt="domyślny" *ngSwitchDefault class="rodzaj-icon"/>
+      <img src="assets/sportowy.jpg" alt="sportowy" *ngSwitchCase="R.sportowy" class="rodzaj-icon"/>
+      <img src="assets/terenowy.jpg" alt="terenowy" *ngSwitchCase="R.terenowy" class="rodzaj-icon"/>
+      <img src="assets/kamper.jpg" alt="kamper" *ngSwitchCase="R.kamper" class="rodzaj-icon"/>
+    </ng-container>
+
+  </section>
+</main>
