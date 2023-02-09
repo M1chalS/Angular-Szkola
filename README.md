@@ -16,6 +16,7 @@
 - projekt11 - Komponent nr 2
 - projekt12 - Usługi
 - projekt13 - Usługi powtórzenie
+- projekt14 - Harry Potter-powtórzenie
 
 ## Komendy włączania
 

@@ -1,0 +1,14 @@
+<header>
+Harry Potter - obliczamy BMI!!!
+</header>
+<main>
+    <select [(ngModel)]="postac">
+      <option *ngFor="let x of lista" [ngValue]="x">{{ x.nazwa }}</option>
+    </select>
+
+    <app-main [name]="postac.nazwa" [image]="postac.zdjecie" [weight]="postac.waga" [height]="postac.wzrost"/>
+    Red: <input [(ngModel)]="red" />
+    Green: <input [(ngModel)]="green" />
+    Blue: <input [(ngModel)]="blue" />
+    <button (click)="zmienTlo()">Zmień tło</button>
+</main>

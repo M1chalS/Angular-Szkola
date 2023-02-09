@@ -8,7 +8,7 @@ import {Rodzaj, Samochod} from './interfaceSamochod';
 })
 
 export class AppComponent {
-  title = 'projekt07';
+  title = 'projekt10';
   samochody:Samochod[] = [
     {
       marka: "brak",
