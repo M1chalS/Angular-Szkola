@@ -1,0 +1,9 @@
+<p>Kategoria produktu:
+  <select [(ngModel)]="kategoria">
+    <option *ngFor="let x of kategorie" [ngValue]="x">{{x}}</option>
+  </select>
+</p>
+<p>Ilosc szt. <input type="number" [(ngModel)]="ilosc"/></p>
+<p>Adres wysyłki: </p>
+<app-adres [wyslij]="pobierzAdres"></app-adres>
+<p><span style="color: red">Twoje zamówienie:</span> <span style="color: blue"> {{ kategoria }} szt. {{ ilosc }} zostanie wysłane na adres. {{ adres }}</span></p>
